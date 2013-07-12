@@ -12,6 +12,8 @@ Instructions:
 ==============
 Copy roomservice.xml into .repo/local_manifests folder in your slim bean tree
 
+$ repo sync
+
 vendorsetup.sh
 ===============
 Add your device name in vendorsetup.sh
@@ -25,5 +27,7 @@ after sync add it again
 Build
 =======
 . build/envsetup.sh
+
 lunch
+
 mka bacon -j# (# =number of core in your cpu)
