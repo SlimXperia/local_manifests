@@ -1,20 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+
+  <!-- Remove Project From Slim manifeast -->
   <remove-project name="SlimRoms/hardware_ti_wpan" />
   <remove-project name="SlimRoms/packages_apps_Camera" />
   <remove-project name="SlimRoms/packages_apps_Gallery2" />
-  <project name="LegacyXperia/android_hardware_ti_wpan" path="hardware/ti/wpan" remote="github" revision="cm-10.1" />
+  <remove-project name="SlimRoms/android_hardware_ti_wlan" />  
+
+
+
+  <!-- Device Tree & Common for Slim Add your Device here -->
+  <project name="SlimXperia/android_device_semc_anzu" path="device/semc/anzu" remote="github" revision="jb-4.2" />
+  <project name="SlimXperia/android_device_semc_haida" path="device/semc/haida" remote="github" revision="jb-4.2" />
+  <project name="SlimXperia/android_device_semc_urushi" path="device/semc/urushi" remote="github" revision="jb-4.2" />
+  <project name="SlimXperia/android_device_semc_hallon" path="device/semc/hallon" remote="github" revision="jb-4.2" />
+  <project name="SlimXperia/android_device_semc_mogami-common" path="device/semc/mogami-common" remote="github" revision="jb-4.2"/>
+
+
+  <!-- Our legacy Display From Arco -->
   <project path="hardware/qcom/display-legacy" name="arco/android_hardware_qcom_display-legacy" remote="github" revision="cm-10.1" />
   <project path="hardware/qcom/media-legacy" name="arco/android_hardware_qcom_media-legacy" remote="github" revision="cm-10.1" />
+
+  
+  <!-- Repos needed From LX -->
+  <project name="LegacyXperia/android_device_semc_msm7x30-common" path="device/semc/msm7x30-common" remote="github" revision="cm-10.1" />
   <project name="LegacyXperia/android_external_wpa_supplicant_8_ti" path="external/wpa_supplicant_8_ti" remote="github" revision="cm-10.1" />
   <project name="LegacyXperia/android_packages_apps_Camera" path="packages/apps/Camera" remote="github" revision="cm-10.1" />
   <project name="LegacyXperia/android_packages_apps_Gallery2" path="packages/apps/Gallery2" remote="github" revision="cm-10.1" />
   <project name="LegacyXperia/android_device_semc_mogami-common" path="device/semc/mogami-common" remote="github" revision="cm-10.1" />
   <project name="LegacyXperia/android_device_semc_msm7x30-common" path="device/semc/msm7x30-common" remote="github" revision="cm-10.1" />
   <project name="LegacyXperia/msm7x30-3.4.x-nAa" path="kernel/semc/msm7x30" remote="github" revision="cm-10.1" />
-  <project name="CyanogenMod/android_hardware_sony_DASH" path="hardware/sony/DASH" remote="github" revision="cm-10.1" />
   <project name="LegacyXperia/proprietary_vendor_semc" path="vendor/semc" remote="github" revision="cm-10.1" />
-  <project name="PAC-man/android_prebuilt_linux-x86_toolchain_arm-gnueabihf-linaro-4.7" path="prebuilt/linux-x86/toolchain/arm-gnueabihf-linaro-4.7" remote="github" revision="master" />
-  <project name="br101/android_external_iw" path="external/iw" remote="github" revision="master" />
+  <project name="LegacyXperia/android_hardware_ti_wpan" path="hardware/ti/wpan" remote="github" revision="cm-10.1" />
+  <project name="LegacyXperia/android_hardware_ti_wlan" path="hardware/ti/wlan" revision="cm-10.1-omapzoom"/>
+
+
+  <!-- Repos From CM -->
+  <project name="CyanogenMod/android_hardware_sony_DASH" path="hardware/sony/DASH" remote="github" revision="cm-10.1" />
   <project path="hardware/qcom/audio-caf" name="CyanogenMod/android_hardware_qcom_audio-caf" remote="github" revision="cm-10.1" />
+
+
+  <!-- Linaro Tool Chain -->
+  <project name="PAC-man/android_prebuilt_linux-x86_toolchain_arm-gnueabihf-linaro-4.7" path="prebuilt/linux-x86/toolchain/arm-gnueabihf-linaro-4.7" remote="github" revision="master" />
+
+
+  <!-- Build iw from source -->
+  <project name="br101/android_external_iw" path="external/iw" remote="github" revision="master" />
+
 </manifest>
